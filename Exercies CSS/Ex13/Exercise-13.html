@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Exercise #13</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        body{
+            max-height: 100vh;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 4fr 1fr;
+            grid-template-rows: 1fr 4fr 0.25fr;
+            grid-template-areas: "side-left main side-right"
+                                 "side-left main side-right"
+                                 "footer footer footer";
+
+        }
+
+        .side{
+            background-color: #FFFFCC;
+        }
+
+        .main{
+            grid-area: main;
+            display: grid;
+            grid-template-columns: 1fr 0.5fr;
+            grid-template-rows: 0.15fr 1fr;
+            grid-template-areas: "main-header main-header"
+            "ML MR";
+        }
+
+        .main-header{
+            grid-area: main-header;
+            background-color: #EBDE52;
+        }   
+
+        .main-left{
+            grid-area: ML;
+            padding-top: 5%;
+            overflow-y: auto;
+        }
+
+        .main-right{
+            grid-area: MR;
+            background-color: #E3E3E3;
+            padding-top: 7%;
+        }
+
+        .footer{
+            grid-area: footer;
+            background-color: #696969;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="side" style="grid-area: side-left;"></div>
+
+    <div class="main">
+        <h1 class="main-header"> 2-column layout</h1>
+        
+        <div class="main-left">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia lorem eu porttitor luctus. Sed ac mauris 
+                vitae arcu consectetur tempor sed congue felis. Vivamus posuere scelerisque dapibus. Nam ultricies laoreet augue 
+                id semper Sed eu lacus ac dolor volutpat ullamcorper at sed risus. Nunc sollicitudin bibendum varius. Donec laoreet 
+                gravida metuS. Fusce porta consequat augue, eget fermentum lectus molestie ultrices. Etiam sit amet sem sed massa 
+                maximus eleifend. Etiam eu maximus ipsum. Morbi ut venenatis mauris. Etiam vehicula nisl neque, fringilla pellentesque 
+                dui consequat quis. Nunc feugiat, massa non dapibus blandit, tellus diam gravida nisl, eu varius leo quani nec leo Nune 
+                fermentum mauris viverra purus elementum, at bibendum dui fringilla. Nam ac lacus a leo Taculis pellentesque rhoncus 
+                sed quam.
+            </p>
+            <br>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia lorem eu porttitor luctus. Sed ac mauris 
+                vitae arcu consectetur tempor sed congue felis. Vivamus posuere scelerisque dapibus. Nam ultricies laoreet augue 
+                id semper Sed eu lacus ac dolor volutpat ullamcorper at sed risus. Nunc sollicitudin bibendum varius. Donec laoreet 
+                gravida metuS. Fusce porta consequat augue, eget fermentum lectus molestie ultrices. Etiam sit amet sem sed massa 
+                maximus eleifend. Etiam eu maximus ipsum. Morbi ut venenatis mauris. Etiam vehicula nisl neque, fringilla pellentesque 
+                dui consequat quis. Nunc feugiat, massa non dapibus blandit, tellus diam gravida nisl, eu varius leo quani nec leo Nune 
+                fermentum mauris viverra purus elementum, at bibendum dui fringilla. Nam ac lacus a leo Taculis pellentesque rhoncus 
+                sed quam.
+            </p>
+            <br>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia lorem eu porttitor luctus. Sed ac mauris 
+                vitae arcu consectetur tempor sed congue felis. Vivamus posuere scelerisque dapibus. Nam ultricies laoreet augue 
+                id semper Sed eu lacus ac dolor volutpat ullamcorper at sed risus. Nunc sollicitudin bibendum varius. Donec laoreet 
+                gravida metuS. Fusce porta consequat augue, eget fermentum lectus molestie ultrices. Etiam sit amet sem sed massa 
+                maximus eleifend. Etiam eu maximus ipsum. Morbi ut venenatis mauris. Etiam vehicula nisl neque, fringilla pellentesque 
+                dui consequat quis. Nunc feugiat, massa non dapibus blandit, tellus diam gravida nisl, eu varius leo quani nec leo Nune 
+                fermentum mauris viverra purus elementum, at bibendum dui fringilla. Nam ac lacus a leo Taculis pellentesque rhoncus 
+                sed quam.
+            </p>
+        </div>
+
+        <div class="main-right">
+            <ul>
+                <li>Item #1</li>
+                <li>Item #2</li>
+                <li>Item #3</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="side" style="grid-area: side-right;"></div>
+    <div class="footer"> Accept our cookie policy.</div>
+
+    
+</body>
+</html>
