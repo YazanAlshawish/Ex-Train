@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ex CSS #1</title>
+    <style>
+        body{
+            background-color: #F39265;
+            overflow: hidden;
+            height: 100vh;
+            min-width: 650px;
+        }
+
+        .center{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #container{
+            background-color: #B43D5D;
+            position: relative;
+            height: 650px; 
+            width: 650px; 
+            border-radius: 50%;
+            display: flex;
+        }
+
+        .four-squre{
+            height: 100%; 
+            width: 100%;
+            border-radius: 50%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas: "clean-2 ."
+            ". clean-4";
+            
+        }
+        .half-cir{
+            background-color: #B43D5D;
+            position: absolute;
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+            margin: auto auto;
+            z-index: 1;
+        }
+
+        #top-right-bottm-left{
+            background-color: #FFFD87;
+            height: 500px;
+            width: 500px;
+            border-radius: 50%;
+            position: absolute;
+            margin: auto auto;
+        }
+
+        .clean-2{
+            height: 100%;
+            width: 100%;
+            border-radius: 100% 0 0 0;
+            background-color: #B43D5D;
+            grid-area: clean-2;
+            z-index: 1;
+        }
+
+        .clean-4{
+            height: 100%;
+            width: 100%;
+            border-radius: 0 0 100% 0;
+            background-color: #B43D5D;
+            grid-area: clean-4;
+            z-index: 1;
+        }
+
+    </style>
+</head>
+
+<body class="center">
+    <div id="container">
+        <div class="four-squre">
+            <div id="top-right-bottm-left"></div>
+            <div class="clean-2"></div>
+            <div class="clean-4"></div>
+            <div class="half-cir"></div>
+        </div>
+    </div>
+</body>
+</html>
